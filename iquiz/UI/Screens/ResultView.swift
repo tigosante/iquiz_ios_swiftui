@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct RestartView: View {
+struct ResultView: View {
+    @EnvironmentObject private var router: RouterService
+    
     var result: QuestionModel
     
     var body: some View {
@@ -24,15 +26,15 @@ struct RestartView: View {
                 .foregroundColor(.white)
                 .padding(.bottom, 32)
             
-            NavigationLink(value: RouteEnum.home) {
-                SecondaryButton(label: "Restart Quiz") {}
+            PrimaryButton(label: "Restart Quiz") {
+                router.navigateToRoot()
             }
-        }
+        }.navigationBarBackButtonHidden()
     }
 }
 
 #Preview {
     NavigationStack {
-        RestartView(result: .init(question: "question", answerList: ["1", "2", "3"], correctAnswer: "1"))
+        ResultView(result: .init(question: "question", answerList: ["1", "2", "3"], correctAnswer: "1"))
     }
 }

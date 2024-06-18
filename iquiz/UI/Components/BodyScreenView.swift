@@ -7,12 +7,30 @@
 
 import SwiftUI
 
-struct BodyScreenView: View {
+struct BodyScreenView<Content> : View where Content : View {
+    let content: () -> Content
+    
+    init(@ViewBuilder content: @escaping () -> Content) {
+        self.content = content
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(content: { content().padding(.horizontal,32) })
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.backgroundColorValue)
     }
 }
 
 #Preview {
-    BodyScreenView()
+    BodyScreenView {
+        Text("Body")
+            .font(.title)
+            .foregroundColor(.white)
+        Text("Body")
+            .font(.title)
+            .foregroundColor(.white)
+        Text("Body")
+            .font(.title)
+            .foregroundColor(.white)
+    }
 }

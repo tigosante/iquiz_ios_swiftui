@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A2FC04E2C1F913600EFEC94 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FC04D2C1F913600EFEC94 /* HomeView.swift */; };
+		9A2FC0502C1F918500EFEC94 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FC04F2C1F918500EFEC94 /* QuestionView.swift */; };
+		9A2FC0522C1F91AC00EFEC94 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FC0512C1F91AC00EFEC94 /* ResultView.swift */; };
+		9A2FC0562C1F97B300EFEC94 /* BodyScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FC0552C1F97B300EFEC94 /* BodyScreenView.swift */; };
+		9A4C85042C21C21B00916BC8 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C85032C21C21B00916BC8 /* QuestionModel.swift */; };
+		9A4C850C2C22407000916BC8 /* RouterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C850B2C22407000916BC8 /* RouterService.swift */; };
 		9A5909562C1B234F009DFB27 /* iquizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909552C1B234F009DFB27 /* iquizApp.swift */; };
 		9A5909582C1B234F009DFB27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909572C1B234F009DFB27 /* ContentView.swift */; };
 		9A59095A2C1B2350009DFB27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A5909592C1B2350009DFB27 /* Assets.xcassets */; };
@@ -14,6 +20,8 @@
 		9A5909682C1B2350009DFB27 /* iquizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909672C1B2350009DFB27 /* iquizTests.swift */; };
 		9A5909722C1B2350009DFB27 /* iquizUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909712C1B2350009DFB27 /* iquizUITests.swift */; };
 		9A5909742C1B2350009DFB27 /* iquizUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909732C1B2350009DFB27 /* iquizUITestsLaunchTests.swift */; };
+		9A5909842C1B23A1009DFB27 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909832C1B23A1009DFB27 /* PrimaryButton.swift */; };
+		9A5909892C1B2E48009DFB27 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909882C1B2E48009DFB27 /* TextButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A2FC04D2C1F913600EFEC94 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9A2FC04F2C1F918500EFEC94 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		9A2FC0512C1F91AC00EFEC94 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		9A2FC0552C1F97B300EFEC94 /* BodyScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyScreenView.swift; sourceTree = "<group>"; };
+		9A4C85032C21C21B00916BC8 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		9A4C850B2C22407000916BC8 /* RouterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterService.swift; sourceTree = "<group>"; };
 		9A5909522C1B234F009DFB27 /* iquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5909552C1B234F009DFB27 /* iquizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iquizApp.swift; sourceTree = "<group>"; };
 		9A5909572C1B234F009DFB27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +59,8 @@
 		9A59096D2C1B2350009DFB27 /* iquizUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iquizUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5909712C1B2350009DFB27 /* iquizUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iquizUITests.swift; sourceTree = "<group>"; };
 		9A5909732C1B2350009DFB27 /* iquizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iquizUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A5909832C1B23A1009DFB27 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		9A5909882C1B2E48009DFB27 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +88,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A4C85022C21C21000916BC8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A4C85032C21C21B00916BC8 /* QuestionModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9A4C850A2C22405900916BC8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9A4C850B2C22407000916BC8 /* RouterService.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		9A5909492C1B234F009DFB27 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +127,9 @@
 		9A5909542C1B234F009DFB27 /* iquiz */ = {
 			isa = PBXGroup;
 			children = (
+				9A4C850A2C22405900916BC8 /* Router */,
+				9A4C85022C21C21000916BC8 /* Models */,
+				9A5909802C1B2361009DFB27 /* UI */,
 				9A5909552C1B234F009DFB27 /* iquizApp.swift */,
 				9A5909572C1B234F009DFB27 /* ContentView.swift */,
 				9A5909592C1B2350009DFB27 /* Assets.xcassets */,
@@ -127,6 +162,35 @@
 				9A5909732C1B2350009DFB27 /* iquizUITestsLaunchTests.swift */,
 			);
 			path = iquizUITests;
+			sourceTree = "<group>";
+		};
+		9A5909802C1B2361009DFB27 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9A5909822C1B236E009DFB27 /* Components */,
+				9A5909812C1B2368009DFB27 /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9A5909812C1B2368009DFB27 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9A2FC04D2C1F913600EFEC94 /* HomeView.swift */,
+				9A2FC04F2C1F918500EFEC94 /* QuestionView.swift */,
+				9A2FC0512C1F91AC00EFEC94 /* ResultView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9A5909822C1B236E009DFB27 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				9A5909832C1B23A1009DFB27 /* PrimaryButton.swift */,
+				9A5909882C1B2E48009DFB27 /* TextButton.swift */,
+				9A2FC0552C1F97B300EFEC94 /* BodyScreenView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A2FC0522C1F91AC00EFEC94 /* ResultView.swift in Sources */,
+				9A4C85042C21C21B00916BC8 /* QuestionModel.swift in Sources */,
+				9A2FC0502C1F918500EFEC94 /* QuestionView.swift in Sources */,
+				9A5909892C1B2E48009DFB27 /* TextButton.swift in Sources */,
+				9A5909842C1B23A1009DFB27 /* PrimaryButton.swift in Sources */,
+				9A2FC04E2C1F913600EFEC94 /* HomeView.swift in Sources */,
+				9A2FC0562C1F97B300EFEC94 /* BodyScreenView.swift in Sources */,
+				9A4C850C2C22407000916BC8 /* RouterService.swift in Sources */,
 				9A5909582C1B234F009DFB27 /* ContentView.swift in Sources */,
 				9A5909562C1B234F009DFB27 /* iquizApp.swift in Sources */,
 			);

@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct iquizApp: App {
+    @ObservedObject private var router = RouterService()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack(path: $router.stack) {
+                ContentView()
+                    .navigationDestination(for: RouterService.RouteDestination.self, destination: router.view)
+            }
+            .environmentObject(router)
         }
     }
 }

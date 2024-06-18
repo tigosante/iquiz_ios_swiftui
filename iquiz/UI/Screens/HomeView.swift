@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject private var router: RouterService
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        BodyScreenView {
+            VStack {
+                Image(uiImage: .logo)
+                PrimaryButton(label: "Iniciar quiz") {
+                    router.navigate(to: .question)
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    HomeView()
+    NavigationStack {
+        HomeView()
+    }
 }

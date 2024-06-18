@@ -7,29 +7,20 @@
 
 import SwiftUI
 
-enum ColorScheameType: String {
-    case primary = "primaryColor"
-    case secondary = "secondaryColor"
-}
-
 struct TextButton: View {
     let label: String
-    let type: ColorScheameType
+    let foregroundColor: Color
     
     var body: some View {
         Text(label)
             .padding(.horizontal, 80)
             .padding(.vertical, 14)
-            .foregroundColor(Color(type.rawValue))
+            .foregroundColor(foregroundColor)
             .font(.title3)
             .fontWeight(.bold)
     }
 }
 
 #Preview {
-    TextButton(label: "Text Button", type: .primary)
-}
-
-#Preview {
-    TextButton(label: "Text Button", type: .secondary)
+    TextButton(label: "Text Button", foregroundColor: .primaryColorValue)
 }

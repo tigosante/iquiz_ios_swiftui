@@ -15,7 +15,7 @@ struct PrimaryButton: View {
     init(label: String, onPressed: @escaping () -> Void) {
         self.label = label
         self.onPressed = onPressed
-        self.backgroundColor = .secondaryColorValue
+        self.backgroundColor = .primaryColorValue
     }
     
     init(label: String, backgroundColor: Color, onPressed: @escaping () -> Void) {
@@ -28,7 +28,7 @@ struct PrimaryButton: View {
         Button {
             onPressed()
         } label: {
-            TextButton(label: label, foregroundColor: .onSecondaryColorValue)
+            TextButton(label: label, foregroundColor: .onPrimaryColorValue)
         }.frame(height: 50)
             .frame(maxWidth: .infinity)
             .background(backgroundColor)
@@ -38,8 +38,8 @@ struct PrimaryButton: View {
 
 #Preview {
     Group {
-        SecondaryButton(label: "Secondary button") {}
-        SecondaryButton(label: "Secondary button", backgroundColor: .accentColor) {}
+        PrimaryButton(label: "Secondary button") {}
+        PrimaryButton(label: "Secondary button", backgroundColor: .accentColor) {}
     }
 }
 
