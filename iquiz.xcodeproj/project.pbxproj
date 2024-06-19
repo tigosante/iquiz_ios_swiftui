@@ -131,10 +131,11 @@
 			isa = PBXGroup;
 			children = (
 				9AFB3F782C226B5900486961 /* App */,
-				9A4C850A2C22405900916BC8 /* Router */,
-				9A4C85022C21C21000916BC8 /* Models */,
+				9AFB3F7A2C226BE100486961 /* Common */,
 				9A5909822C1B236E009DFB27 /* Components */,
 				9A5909802C1B2361009DFB27 /* Views */,
+				9AFB3F792C226BBC00486961 /* ViewModels */,
+				9A4C85022C21C21000916BC8 /* Models */,
 				9A5909592C1B2350009DFB27 /* Assets.xcassets */,
 				9A59095B2C1B2350009DFB27 /* iquiz.entitlements */,
 				9A59095C2C1B2350009DFB27 /* Preview Content */,
@@ -194,6 +195,21 @@
 				9A5909572C1B234F009DFB27 /* ContentView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		9AFB3F792C226BBC00486961 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9AFB3F7A2C226BE100486961 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A4C850A2C22405900916BC8 /* Router */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
