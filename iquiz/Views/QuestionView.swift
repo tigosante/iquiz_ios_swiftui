@@ -9,40 +9,14 @@ import SwiftUI
 
 struct QuestionView: View {
     @EnvironmentObject private var router: RouterService
-    @State private var currentQuestion: QuestionModel
-    @State var questionList: [QuestionModel]
+    @StateObject private var viewModel = QuestionViewModel()
     
-    init(questionList: [QuestionModel]) {
-        self.questionList = questionList
-        if let question = questionList.first {
-            self.currentQuestion = question
-        } else {
-            self.currentQuestion = .init(question: "", answerList: [], correctAnswer: "")
-        }
-    }
-    
-    private var currentIndex: Int {
-        get { questionList.firstIndex(where: { currentQuestion.id == $0.id }) ?? -1 }
-    }
+    private var currentQuestion: QuestionModel { get { viewModel.currentQuestion } }
+    private var questionList: [QuestionModel] { get { viewModel.questionList } }
     
     private func nextQuestion() {
-        if currentIndex >= 0 {
-            let nextIndex = currentIndex + 1
-            if nextIndex < questionList.count {
-                currentQuestion = questionList[nextIndex]
-                return
-            }
-        }
-        router.navigate(to: .result(.init(
-            questionCount: questionList.count,
-            hitCounter: questionList.filter { $0.isCorrectAnswer }.count
-        )))
-    }
-    
-    private func replyQuestion(answer: String) {
-        currentQuestion.reply(answer: answer)
-        if currentIndex >= 0 {
-            questionList[currentIndex] = currentQuestion
+        if !viewModel.nextQuestion() {
+            router.navigate(to: .result(.init(questionCount: viewModel.questionCount, hitCounter: viewModel.hitCounter)))
         }
     }
     
@@ -68,7 +42,7 @@ struct QuestionView: View {
                     PrimaryButton(label: option) { }
                 } else {
                     PrimaryButton(label: option) {
-                        replyQuestion(answer: option)
+                        viewModel.replyQuestion(answer: option)
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: nextQuestion)
                     }
                 }
@@ -84,16 +58,7 @@ struct QuestionView: View {
 
 #Preview {
     NavigationStack {
-        QuestionView(questionList: [
-            .init(
-                question: "Em que ano Vingadores Ultimato foi lançado?",
-                answerList: ["2019", "2018", "2017"],
-                correctAnswer: "2019"),
-            .init(
-                question: "Qual feitiço para desarmar o seu oponente, em Harry Potter?",
-                answerList: ["Expecto Patronum", "Avada Kedavra", "Expelliarmus"],
-                correctAnswer: "Expelliarmus")
-        ])
+        QuestionView()
         .environmentObject(RouterService())
     }
 }

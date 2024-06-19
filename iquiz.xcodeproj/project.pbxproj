@@ -23,6 +23,7 @@
 		9A5909742C1B2350009DFB27 /* iquizUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909732C1B2350009DFB27 /* iquizUITestsLaunchTests.swift */; };
 		9A5909842C1B23A1009DFB27 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909832C1B23A1009DFB27 /* PrimaryButton.swift */; };
 		9A5909892C1B2E48009DFB27 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909882C1B2E48009DFB27 /* TextButton.swift */; };
+		9AFB3F7C2C23144900486961 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFB3F7B2C23144900486961 /* QuestionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		9A5909732C1B2350009DFB27 /* iquizUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iquizUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9A5909832C1B23A1009DFB27 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		9A5909882C1B2E48009DFB27 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		9AFB3F7B2C23144900486961 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 		9AFB3F792C226BBC00486961 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9AFB3F7B2C23144900486961 /* QuestionViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				9A4C850C2C22407000916BC8 /* RouterService.swift in Sources */,
 				9A4C850E2C2254DF00916BC8 /* ResultModel.swift in Sources */,
 				9A5909582C1B234F009DFB27 /* ContentView.swift in Sources */,
+				9AFB3F7C2C23144900486961 /* QuestionViewModel.swift in Sources */,
 				9A5909562C1B234F009DFB27 /* iquizApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
