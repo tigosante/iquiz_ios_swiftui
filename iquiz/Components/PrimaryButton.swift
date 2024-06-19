@@ -12,6 +12,7 @@ struct PrimaryButton: View {
     var onPressed: () -> Void
     let backgroundColor: Color
     
+    
     init(label: String, onPressed: @escaping () -> Void) {
         self.label = label
         self.onPressed = onPressed
@@ -29,13 +30,17 @@ struct PrimaryButton: View {
             onPressed()
         } label: {
             TextButton(label: label, foregroundColor: .onPrimaryColorValue)
+                .frame(maxWidth: .infinity)
         }
         .frame(height: 62)
         .frame(minWidth: 100, maxWidth: .infinity)
         .background(backgroundColor)
         .cornerRadius(16)
+        
     }
 }
+
+
 
 #Preview {
     Group {

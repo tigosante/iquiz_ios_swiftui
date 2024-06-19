@@ -53,5 +53,6 @@ struct ResultView: View {
 #Preview {
     NavigationStack {
         ResultView(result: .init(questionCount: 10, hitCounter: 2))
+            .environmentObject(RouterService())
     }
 }
