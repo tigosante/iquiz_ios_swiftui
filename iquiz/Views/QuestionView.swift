@@ -47,7 +47,7 @@ struct QuestionView: View {
     }
     
     var body: some View {
-        BodyScreenView {
+        BodyScreen {
             Text(currentQuestion.question)
                 .font(.system(size: 36))
                 .fontWeight(.bold)

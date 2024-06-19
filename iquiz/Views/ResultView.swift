@@ -18,7 +18,7 @@ struct ResultView: View {
     }
     
     var body: some View {
-        BodyScreenView {
+        BodyScreen {
             Text("Você finalizou o iQuiz!")
                 .font(.system(size: 40))
                 .fontWeight(.bold)

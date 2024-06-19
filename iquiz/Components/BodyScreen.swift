@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BodyScreenView<Content> : View where Content : View {
+struct BodyScreen<Content> : View where Content : View {
     let content: () -> Content
     
     init(@ViewBuilder content: @escaping () -> Content) {
@@ -22,7 +22,7 @@ struct BodyScreenView<Content> : View where Content : View {
 }
 
 #Preview {
-    BodyScreenView {
+    BodyScreen {
         Text("Body")
             .font(.title)
             .foregroundColor(.white)

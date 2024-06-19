@@ -11,7 +11,7 @@ struct HomeView: View {
     @EnvironmentObject private var router: RouterService
     
     var body: some View {
-        BodyScreenView {
+        BodyScreen {
             VStack {
                 Image(uiImage: .logo)
                     .padding(32)
