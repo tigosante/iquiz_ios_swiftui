@@ -38,12 +38,12 @@ struct QuestionView: View {
                         label: option,
                         backgroundColor: currentQuestion.isCorrectAnswer ? .green : .red
                     ) { }
-                } else if currentQuestion.wasAnswered {
-                    PrimaryButton(label: option) { }
                 } else {
                     PrimaryButton(label: option) {
-                        viewModel.replyQuestion(answer: option)
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: nextQuestion)
+                        if !currentQuestion.wasAnswered {
+                            viewModel.replyQuestion(answer: option)
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: nextQuestion)
+                        }
                     }
                 }
             }
