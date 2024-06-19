@@ -29,10 +29,11 @@ struct PrimaryButton: View {
             onPressed()
         } label: {
             TextButton(label: label, foregroundColor: .onPrimaryColorValue)
-        }.frame(height: 50)
-            .frame(maxWidth: .infinity)
-            .background(backgroundColor)
-            .cornerRadius(16)
+        }
+        .frame(height: 62)
+        .frame(minWidth: 100, maxWidth: .infinity)
+        .background(backgroundColor)
+        .cornerRadius(16)
     }
 }
 

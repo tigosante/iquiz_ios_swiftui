@@ -11,8 +11,8 @@ import SwiftUI
 final class RouterService: ObservableObject {
     public enum RouteDestination: Hashable {
         case home
-        case question
-        case result(QuestionModel)
+        case question([QuestionModel])
+        case result(ResultModel)
     }
     
     @Published var stack = NavigationPath()
@@ -20,7 +20,7 @@ final class RouterService: ObservableObject {
     @ViewBuilder func view(for route: RouteDestination) -> some View {
         switch route {
         case .home: HomeView()
-        case .question: QuestionView()
+        case .question(let questions):QuestionView(questionList: questions)
         case .result(let data): ResultView(result: data)
         }
     }

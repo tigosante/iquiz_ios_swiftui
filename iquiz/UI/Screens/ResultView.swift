@@ -9,24 +9,30 @@ import SwiftUI
 
 struct ResultView: View {
     @EnvironmentObject private var router: RouterService
-    
-    var result: QuestionModel
+    private var percent: Int { get { (result.hitCounter / result.questionCount) * 100 } }
+    var result: ResultModel
     
     var body: some View {
         BodyScreenView {
-            Text("Quiz Result")
-                .font(.title)
+            Text("Você finalizou o iQuiz!")
+                .font(.system(size: 40))
                 .fontWeight(.bold)
                 .foregroundColor(.white)
-                .padding(.bottom, 8)
+                .padding(.bottom, 40)
             
-            Text("Your answer: \(result.answer)")
-                .font(.title2)
+            Text("Você acertou \(result.hitCounter) de \(result.questionCount) questões")
+                .font(.system(size: 38))
                 .fontWeight(.medium)
                 .foregroundColor(.white)
-                .padding(.bottom, 32)
+                .padding(.bottom, 40)
             
-            PrimaryButton(label: "Restart Quiz") {
+            Text("Percentual final: \(percent)%")
+                .font(.system(size: 26))
+                .fontWeight(.medium)
+                .foregroundColor(.white)
+                .padding(.bottom, 40)
+            
+            PrimaryButton(label: "Reiniciar Quiz") {
                 router.navigateToRoot()
             }
         }.navigationBarBackButtonHidden()
@@ -35,6 +41,6 @@ struct ResultView: View {
 
 #Preview {
     NavigationStack {
-        ResultView(result: .init(question: "question", answerList: ["1", "2", "3"], correctAnswer: "1"))
+        ResultView(result: .init(questionCount: 10, hitCounter: 2))
     }
 }

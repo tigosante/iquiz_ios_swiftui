@@ -13,6 +13,7 @@
 		9A2FC0562C1F97B300EFEC94 /* BodyScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2FC0552C1F97B300EFEC94 /* BodyScreenView.swift */; };
 		9A4C85042C21C21B00916BC8 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C85032C21C21B00916BC8 /* QuestionModel.swift */; };
 		9A4C850C2C22407000916BC8 /* RouterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C850B2C22407000916BC8 /* RouterService.swift */; };
+		9A4C850E2C2254DF00916BC8 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4C850D2C2254DF00916BC8 /* ResultModel.swift */; };
 		9A5909562C1B234F009DFB27 /* iquizApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909552C1B234F009DFB27 /* iquizApp.swift */; };
 		9A5909582C1B234F009DFB27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5909572C1B234F009DFB27 /* ContentView.swift */; };
 		9A59095A2C1B2350009DFB27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A5909592C1B2350009DFB27 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		9A2FC0552C1F97B300EFEC94 /* BodyScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyScreenView.swift; sourceTree = "<group>"; };
 		9A4C85032C21C21B00916BC8 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		9A4C850B2C22407000916BC8 /* RouterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterService.swift; sourceTree = "<group>"; };
+		9A4C850D2C2254DF00916BC8 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		9A5909522C1B234F009DFB27 /* iquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5909552C1B234F009DFB27 /* iquizApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iquizApp.swift; sourceTree = "<group>"; };
 		9A5909572C1B234F009DFB27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9A4C85032C21C21B00916BC8 /* QuestionModel.swift */,
+				9A4C850D2C2254DF00916BC8 /* ResultModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				9A2FC04E2C1F913600EFEC94 /* HomeView.swift in Sources */,
 				9A2FC0562C1F97B300EFEC94 /* BodyScreenView.swift in Sources */,
 				9A4C850C2C22407000916BC8 /* RouterService.swift in Sources */,
+				9A4C850E2C2254DF00916BC8 /* ResultModel.swift in Sources */,
 				9A5909582C1B234F009DFB27 /* ContentView.swift in Sources */,
 				9A5909562C1B234F009DFB27 /* iquizApp.swift in Sources */,
 			);

@@ -13,10 +13,9 @@ struct TextButton: View {
     
     var body: some View {
         Text(label)
-            .padding(.horizontal, 80)
-            .padding(.vertical, 14)
+            .frame(width: .infinity)
             .foregroundColor(foregroundColor)
-            .font(.title3)
+            .font(.system(size: 20))
             .fontWeight(.bold)
     }
 }
