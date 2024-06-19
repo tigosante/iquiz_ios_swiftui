@@ -13,7 +13,6 @@ struct TextButton: View {
     
     var body: some View {
         Text(label)
-            .frame(width: .infinity)
             .foregroundColor(foregroundColor)
             .font(.system(size: 20))
             .fontWeight(.bold)

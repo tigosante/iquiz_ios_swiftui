@@ -9,8 +9,13 @@ import SwiftUI
 
 struct ResultView: View {
     @EnvironmentObject private var router: RouterService
-    private var percent: Int { get { (result.hitCounter / result.questionCount) * 100 } }
     var result: ResultModel
+    
+    private var percent: Int {
+        get {
+            Int(((Double(result.hitCounter) / Double(result.questionCount)) * 100))
+        }
+    }
     
     var body: some View {
         BodyScreenView {
@@ -19,18 +24,24 @@ struct ResultView: View {
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .padding(.bottom, 40)
+                .multilineTextAlignment(.center)
+                .lineLimit(nil)
             
             Text("Você acertou \(result.hitCounter) de \(result.questionCount) questões")
                 .font(.system(size: 38))
                 .fontWeight(.medium)
                 .foregroundColor(.white)
                 .padding(.bottom, 40)
+                .multilineTextAlignment(.center)
+                .lineLimit(nil)
             
             Text("Percentual final: \(percent)%")
                 .font(.system(size: 26))
                 .fontWeight(.medium)
                 .foregroundColor(.white)
                 .padding(.bottom, 40)
+                .multilineTextAlignment(.center)
+                .lineLimit(nil)
             
             PrimaryButton(label: "Reiniciar Quiz") {
                 router.navigateToRoot()

@@ -33,7 +33,6 @@ struct QuestionView: View {
                 return
             }
         }
-        print(questionList.filter { $0.isCorrectAnswer }.count)
         router.navigate(to: .result(.init(
             questionCount: questionList.count,
             hitCounter: questionList.filter { $0.isCorrectAnswer }.count
@@ -70,7 +69,7 @@ struct QuestionView: View {
                 } else {
                     PrimaryButton(label: option) {
                         replyQuestion(answer: option)
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: nextQuestion)
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: nextQuestion)
                     }
                 }
             }
